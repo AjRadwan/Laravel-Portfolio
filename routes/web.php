@@ -19,7 +19,7 @@ Route::get('/', [GalleryController::class, 'index'])->name('gallery.index');
 
 
 Route::resource('gallery', GalleryController::class);
-Route::resource('photos', PhotoController::class);
+Route::resource('photo', PhotoController::class);
 
 
 

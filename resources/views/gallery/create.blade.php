@@ -27,7 +27,7 @@
         @enderror
       
          <label for="image">Image</label>
-         <input type="file" id="cover_img" name="imagePath">
+         <input type="file" id="cover_img" name="image">
          @error('image')
          <strong style="color: red; font-weight: bold; margin-bottom: 20px;"> {{ $message }}</strong>
         @enderror

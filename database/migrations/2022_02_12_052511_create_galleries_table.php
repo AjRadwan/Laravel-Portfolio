@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('name');
             $table->foreignId('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->string('description');
-            $table->string('imagePath');
+            $table->string('image');
             $table->timestamps();
         });
     }

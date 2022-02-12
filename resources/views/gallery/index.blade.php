@@ -1,5 +1,6 @@
  @extends('layouts.main')
 
+
  @section('content')
  <div class="callout primary">
     <div class="row column">
@@ -8,22 +9,23 @@
     </div>
     </div>
 
-{{-- @if (session('message'))
+@if (session('message'))
    <div class="alert-success">
         {{ session('message') }}
     </div>
-@endif --}}
+@endif
+
+@foreach ($galleries as $gallery)
     <div class="row small-up-2 medium-up-3 large-up-4">
- 
   <div class="column">
       
-<a href="">
-    <img class="thumbnail" src="image">    
+<a href="{{route('gallery.show', $gallery->id)}}">
+    <img src="{{asset($gallery->image)}}" alt="" />   
 </a>    
-    <h5>name</h5>
-        
+    <h5>{{$gallery->name}}</h5>
+    <p>{{$gallery->description}}</p>
     </div>
- 
-  </div>
+   </div>
+  @endforeach
     
  @endsection
