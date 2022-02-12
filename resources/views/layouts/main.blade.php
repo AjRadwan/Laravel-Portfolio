@@ -20,7 +20,7 @@
 <h5 class="menu-title">Main Menu</h5>
 <ul class="side-nav mynav">
     <li><a href="/">Home</a></li>
-    <li><a href="">Create Gallery</a></li>
+    <li><a href="{{route('gallery.create')}}">Create Gallery</a></li>
     <li><a href="{{route('login')}}">Login</a></li>
     <li><a href="{{route('register')}}">Register</a></li>
     <li>
