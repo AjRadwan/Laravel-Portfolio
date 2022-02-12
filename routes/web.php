@@ -20,3 +20,11 @@ Route::get('/', [GalleryController::class, 'index'])->name('gallery.index');
 
 Route::resource('gallery', GalleryController::class);
 Route::resource('photos', PhotoController::class);
+
+
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
