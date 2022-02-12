@@ -11,9 +11,12 @@ use App\Http\Controllers\PhotoController;
 |
 | Here is where you can register web routes for your application. These
 | routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
+| contains the "web" middleware group. Now fcreate something great!
 |
 */
 
+Route::get('/', [GalleryController::class, 'index'])->name('gallery.index');
+
+
+Route::resource('gallery', GalleryController::class);
 Route::resource('photos', PhotoController::class);
-Route::resource('galleries', PhotoController::class);
